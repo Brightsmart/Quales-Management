@@ -1,0 +1,1 @@
+This is a Cypress automation code for Quales course management web application
