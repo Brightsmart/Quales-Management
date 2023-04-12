@@ -1,0 +1,74 @@
+Test Case ID,Module,Scenario-Type,Description,Pre-conditions,Test data,Steps,Expected result,Actual result,Status,Comment
+TC 001,Login,Positive,To ensure that students with valid email addresses and valid matric number should be able to login successfully.,"1. Student has a valid matric number
+2. Student has a valid email","Matric number: Qls 123
+Email: test@quales.com","1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field
+5. Click on the login button","A success message should be displayed stating ""You have logged in successfully"" and user should be redirected to the student dashboard page.","A success message was displayed stating ""You have logged in successfully"" and user was redirected to the student dashboard page.",PASS,
+TC 002,Login,Negative,To ensure that students with valid email address and invalid matric number should not be able to login successfully.,"1. Student has an invalid matric number
+2. Student has a valid email","Matric number: Qls 000
+Email: test@quales.com","1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the invalid matric number in the matric number field
+5. Click on the login button","An error message should be displayed stating ""Invalid credentials inputed"" and user should be redirected to the login page.","An error message was displayed stating ""Invalid login details"" and user is redirected to the login page",PASS,
+TC 003,Login,Negative,To ensure that students with invalid email addresses and invalid matric number should not be able to login successfully.,"1. Student has an invalid matric number
+2. Student has a invalid email","Matric number: Qls 000
+Email: test123@quales.com","1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the invalid matric number in the matric number field
+5. Click on the login button","An error message should be displayed stating ""Invalid credentials inputed"" and user should be redirected to the login page.","An error message was displayed stating ""Invalid login details"" and user is redirected to the login page",PASS,
+TC 004,Login,Negative,To ensure that students with invalid email address and valid matric number should not be able to login successfully.,"1. Student has an valid matric number
+2. Student has a invalid email","Matric number: Qls 123
+Email: test123@quales.com","1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the invalid matric number in the matric number field
+5. Click on the login button","An error message should be displayed stating ""Invalid credentials inputed"" and user should be redirected to the login page.","An error message was displayed stating ""Invalid login details"" and user is redirected to the login page",PASS,
+TC 006,Logout,Positive,To ensure that the logout page is functioning,Students should be logged in,"Matric number: Qls 123
+Email: test@quales.com","1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field
+5. Click on the logout button",Students should successfully logout from the website,Students are logged out from the website,PASS,
+TC 007,Result Checker,Positive,To ensure that students are able to check their results,Students should be logged in,"Matric number:
+Q 123
+Scratch Pin:
+123456789","1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field
+5. Click on check result tab
+6.Enter the Matric number and the Scratch pin respectively
+7. Select the academic year and semester",A modal displaying the student's results should pop up,As expected,PASS,
+TC 008,Course Registration,Positive,To ensure that students are able to register courses,Students should be logged in,,"1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field
+5. Click on the Course registration tab
+6. Select expected courses",Students should be directed to a page for course registration,As expected,PASS,
+TC 009,Course Registration,Negative,To ensure that students don't register more number of assigned courses,Students should be logged in,,"1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field
+5. Click on the Course registration tab
+6. Select more than the expected courses","An error message saying ""you have exceeded the maximum number of courses"" should be displayed",As expected,PASS,
+TC 010,Course Registration,Negative,To ensure that students don't register less number of assigned courses,Students should be logged in,,"1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field
+5. Click on the Course registration tab
+6. Select less number of  expected courses","An error message saying ""you have not selected all assigned courses"" should be displayed",As expected,PASS,
+TC 011,Dashboard,Positive,To ensure that the dashboard is displayed,Students should be logged in,,"1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Enter the valid email address in the email address field.
+4. Enter the valid matric number in the matric number field.","After successful login, students dashboard should be displayed",As expected,PASS,
+TC 012,Forgot Password,Positive,To ensure that the forgot password tab is displayed,students should be on the login page,,"1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.",The forgot password tab should be displayed at the bottom center of the login page.,As expected,PASS,
+TC 013,Forgot Password,Positive,To ensure that the forgot password tab is functioning,students should be on the login page,,"1. Go to ""www.qualesstudent.com"" on a chrome browser.
+2. Click on the login button at the top right corner of the homepage.
+3. Click on the forgot password button at the bottom center.
+4. Enter the phone number to receive otp
+5. Enter a new login details",Students should be directed to a reset password page,As expected,PASS,
